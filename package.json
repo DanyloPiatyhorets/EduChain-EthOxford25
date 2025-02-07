@@ -46,7 +46,6 @@
     "verify": "yarn foundry:verify"
   },
   "devDependencies": {
-    "husky": "~8.0.3",
     "lint-staged": "~13.2.2"
   },
   "packageManager": "yarn@3.2.3",
