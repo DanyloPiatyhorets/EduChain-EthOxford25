@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import certificate from './data/certificate.json';
+import strenghts from './data/strenghts.json';
+import ReactMarkdown from 'react-markdown';
+
 
 const CardsExplanation = () => {
+    // Define a state variable for description
+    const [description, setDescription] = useState('');
+
     return (
         <div className="flex flex-col items-center my-20 px-6 max-w-7xl mx-auto">
             <h1 className="text-5xl font-extrabold mb-16 text-center bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-600 bg-clip-text text-transparent animate-gradient-x">
@@ -32,6 +39,23 @@ const CardsExplanation = () => {
                     </div>
                 ))}
             </div>
+
+            <div className="mt-10 text-center">
+                    <button 
+                    onClick={() => setDescription(strenghts[0].description)} 
+                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                    Show Certificate Description
+                    </button>
+                    {description && (
+                    <div className="mt-6 p-6 backdrop-blur-sm bg-white/90 rounded-xl shadow-lg max-w-2xl mx-auto text-left">
+                        {/* The ReactMarkdown component will parse and format the text */}
+                        <ReactMarkdown className="prose prose-blue">
+                        {description}
+                        </ReactMarkdown>
+                    </div>
+                    )}
+                </div>
         </div>
     );
 };

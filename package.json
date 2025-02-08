@@ -60,6 +60,7 @@
     "@pinata/sdk": "^2.1.0",
     "axios": "^1.7.9",
     "lucide-react": "^0.475.0",
-    "pinata": "^1.10.1"
+    "pinata": "^1.10.1",
+    "react-markdown": "^9.0.3"
   }
 }
