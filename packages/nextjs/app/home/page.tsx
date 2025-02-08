@@ -6,7 +6,8 @@ import { useAccount } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
-import LandingVideo from "~~/components/ByAisari/LandingVideo";
+import SectionOneMointains from "~~/components/ByAisari/SectionOneMointains";
+import PdfUploader from "~~/components/ByAisari/PDFUpload";
 
 
 const Home: NextPage = () => {
@@ -15,7 +16,8 @@ const Home: NextPage = () => {
   return (
     <>
 
-    <LandingVideo />
+    <SectionOneMointains />
+    <PdfUploader />
     
     <div className="flex items-center flex-col flex-grow pt-10">
         {/* If you still want to show landingVideo, just keep it here or remove it */}
