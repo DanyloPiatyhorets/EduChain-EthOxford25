@@ -8,6 +8,7 @@ import { Address } from "~~/components/scaffold-eth";
 
 import SectionOneMointains from "~~/components/ByAisari/SectionOneMointains";
 import PdfUploader from "~~/components/ByAisari/PDFUpload";
+import CardsExplanation from "~~/components/ByAisari/CardsExplanation";
 
 
 const Home: NextPage = () => {
@@ -17,7 +18,9 @@ const Home: NextPage = () => {
     <>
 
     <SectionOneMointains />
+    <CardsExplanation />
     <PdfUploader />
+
     
     <div className="flex items-center flex-col flex-grow pt-10">
         {/* If you still want to show landingVideo, just keep it here or remove it */}
