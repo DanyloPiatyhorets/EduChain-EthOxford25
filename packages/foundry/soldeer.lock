@@ -1,0 +1,26 @@
+[[dependencies]]
+name = "@openzeppelin-contracts"
+version = "5.0.2"
+url = "https://soldeer-revisions.s3.amazonaws.com/@openzeppelin-contracts/5_0_2_14-03-2024_06:11:59_contracts.zip"
+checksum = "8bc4f0acc7c187771b878d46f7de4bfad1acad2eb5d096d9d05d34035853f5c3"
+integrity = "55881f6114aa36158566ef52b486d9d96b217c3e47d0e24bbd4994a8cfb5ee7c"
+
+[[dependencies]]
+name = "flare-periphery"
+version = "0.0.20"
+url = "https://soldeer-revisions.s3.amazonaws.com/flare-periphery/0_0_20_07-02-2025_13:24:35_foundry_package.zip"
+checksum = "958c5d6df23e0eccd586bdd8a767fa074b882d3a3d0006634f17ad76c36048ae"
+integrity = "57d612da06c9a76708cf00d5fda8ed1e44c822c66ca74b820f0318559810b065"
+
+[[dependencies]]
+name = "forge-std"
+version = "1.9.5"
+url = "https://soldeer-revisions.s3.amazonaws.com/forge-std/1_9_5_21-12-2024_15:04:05_forge-std-1.9.zip"
+checksum = "57ada736f383289db77fac4472d48f820e7c98172cf9b01681b0c37065ce043f"
+integrity = "4753ffdfa0dde40878372b6a4d8e8fd1648b190b33996896c8b92f6f1680850f"
+
+[[dependencies]]
+name = "solidity-bytes-utils"
+version = "0.0.0"
+git = "https://github.com/GNSPS/solidity-bytes-utils.git"
+rev = "b66afa93c6ba12bb91bac100fc35e8c8c1abae78"

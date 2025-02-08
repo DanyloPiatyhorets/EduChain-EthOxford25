@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/token/ERC721/ERC721.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/access/AccessControl.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/utils/Strings.sol";
 import "./IERC5192.sol";
 
 /// @title University Certificate SBT Contract with Flare Data Connector

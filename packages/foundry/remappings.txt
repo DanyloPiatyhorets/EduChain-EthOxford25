@@ -1,1 +1,4 @@
-@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts
+@openzeppelin-contracts-5.0.2/=dependencies/@openzeppelin-contracts-5.0.2/
+flare-periphery-0.0.20/=dependencies/flare-periphery-0.0.20/
+forge-std-1.9.5/=dependencies/forge-std-1.9.5/
+solidity-bytes-utils-0.0.0/=dependencies/solidity-bytes-utils-0.0.0/

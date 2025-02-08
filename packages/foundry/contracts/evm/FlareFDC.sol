@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "forge-std/Test.sol";
-import "@flarenetwork/flare-periphery-contracts/coston2/ContractRegistry.sol";
-import "@flarenetwork/flare-periphery-contracts/coston2/TestFtsoV2Interface.sol";
-import "@flarenetwork/flare-periphery-contracts/coston2/IFtsoFeedIdConverter.sol";
+import "dependencies/forge-std-1.9.5/src/Test.sol";
+import {ContractRegistry} from "../../dependencies/flare-periphery-0.0.20/src/coston2/ContractRegistry.sol";
+import "dependencies/flare-periphery-0.0.20/src/coston2/FtsoV2Interface.sol";
+import "dependencies/flare-periphery-0.0.20/src/coston2/IFtsoFeedIdConverter.sol";
+
 
 contract FlareFDC {
     address public owner;
@@ -33,13 +34,5 @@ contract FlareFDC {
         return jsonData;
     }
 
-    /**
-     * @dev Gets the FTSO price feed for a given asset.
-     * @param feedName The asset name (e.g., "FLR/USD").
-     */
-    function getCurrentTokenPriceWithDecimals(string memory feedName) public view returns (uint256 _price, int8 _decimals) {
-        TestFtsoV2Interface ftsoV2 = ContractRegistry.getTestFtsoV2();
-        bytes21 feedId = ContractRegistry.getFtsoFeedIdConverter().getFeedId(1, feedName);
-        (_price, _decimals, ) = ftsoV2.getFeedById(feedId);
-    }
+
 }
