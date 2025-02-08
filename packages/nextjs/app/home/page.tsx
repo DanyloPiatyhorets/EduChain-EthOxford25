@@ -20,21 +20,11 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <SectionOneMointains />
-      <CardsExplanation />
-      <PdfUploader />
-      <IPFSCheck jsonData={fakeJsonData} />
-
-<<<<<<< Updated upstream
-    {/*<SectionOneMointains />*/}
-    {/*<CardsExplanation />*/}
-    <PdfUploader />
+        <PdfUploader />
+        <IPFSCheck jsonData={fakeJsonData} />
 
     
     <div className="flex items-center flex-col flex-grow pt-10">
-=======
-      <div className="flex items-center flex-col flex-grow pt-10">
->>>>>>> Stashed changes
         {/* If you still want to show landingVideo, just keep it here or remove it */}
         {/* <landingVideo /> */}
         {/* The rest of your page content */}
