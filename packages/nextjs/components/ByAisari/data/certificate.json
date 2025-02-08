@@ -1,40 +1,37 @@
 [
   {
-    "studentName": "Bob Smith",
-    "universityName": "MIT",
+    "studentName": "Alice Johnson",
+    "universityName": "Harvard University",
     "courseName": "Data Science",
     "degree": "Certificate",
-    "graduationDate": 1685750400
+    "graduationDate": 1672444800
   },
-
   {
-    "studentName": "Bob Smith",
-    "universityName": "MIT",
-    "courseName": "Data Science",
+    "studentName": "Alice Johnson",
+    "universityName": "Stanford University",
+    "courseName": "Blockchain and Smart Contracts",
     "degree": "Certificate",
-    "graduationDate": 1685750400
+    "graduationDate": 1696118400
   },
   {
-      "studentName": "Bob Smith",
-      "universityName": "MIT",
-      "courseName": "Data Science",
-      "degree": "Certificate",
-      "graduationDate": 1685750400
-
+    "studentName": "Alice Johnson",
+    "universityName": "Oxford University",
+    "courseName": "Cybersecurity Fundamentals",
+    "degree": "Diploma",
+    "graduationDate": 1703980800
   },
   {
-    "studentName": "Bob Smith",
-    "universityName": "MIT",
-    "courseName": "Data Science",
+    "studentName": "Alice Johnson",
+    "universityName": "LSE",
+    "courseName": "Software Engineering",
+    "degree": "Bachelor’s Degree",
+    "graduationDate": 1656633600
+  },
+  {
+    "studentName": "Alice Johnson",
+    "universityName": "UCL",
+    "courseName": "Cloud Computing and DevOps",
     "degree": "Certificate",
-    "graduationDate": 1685750400
-  },
-  {
-      "studentName": "Bob Smith",
-      "universityName": "MIT",
-      "courseName": "Data Science",
-      "degree": "Certificate",
-      "graduationDate": 1685750400
-
+    "graduationDate": 1712016000
   }
-  ]
+]
