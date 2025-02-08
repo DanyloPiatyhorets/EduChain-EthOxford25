@@ -89,6 +89,7 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
        string memory _courseName,
        string memory _studentName,
        uint256 _graduationDate,
+       string memory _degree,
        bytes32 documentHash
    ) external onlyRole(VERIFIER_ROLE) {
        Certificate storage cert = certificates[tokenId];
@@ -100,6 +101,7 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
        cert.courseName = _courseName;
        cert.studentName = _studentName;
        cert.graduationDate = _graduationDate;
+        cert.degree = _degree;
        cert.isVerified = true;
 
        _verifiedHashes[documentHash] = true;

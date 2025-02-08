@@ -4,6 +4,7 @@ out = 'out'
 libs = ['dependencies']
 fs_permissions = [{ access = "read-write", path = "./"}]
 
+private_key = "${DEPLOYER_PRIVATE_KEY}"
 
 [rpc_endpoints]
 default_network = "http://127.0.0.1:8545"
@@ -27,6 +28,8 @@ scrollSepolia = "https://sepolia-rpc.scroll.io"
 scroll = "https://rpc.scroll.io"
 pgn = "https://rpc.publicgoods.network"
 pgnTestnet = "https://sepolia.publicgoods.network"
+conston2 = "https://coston2-api.flare.network/ext/C/rpc"
+
 
 [dependencies]
 flare-periphery = "0.0.20"

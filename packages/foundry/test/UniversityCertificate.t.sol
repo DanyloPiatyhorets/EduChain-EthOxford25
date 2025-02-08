@@ -50,7 +50,7 @@ contract UniversityCertificateTest is Test {
         bytes32 documentHash = keccak256(abi.encodePacked(testIpfsHash));
 
         vm.prank(university);
-        universityCertificate.verifyCertificateData(0, universityName, courseName, studentName, graduationDate, documentHash);
+        universityCertificate.verifyCertificateData(0, universityName, courseName, studentName, graduationDate, degree, documentHash);
 
         // Retrieve certificate
         UniversityCertificate.Certificate memory cert = universityCertificate.getCertificate(0);
