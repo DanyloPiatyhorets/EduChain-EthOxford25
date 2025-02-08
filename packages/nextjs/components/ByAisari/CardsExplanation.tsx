@@ -13,7 +13,7 @@ const CardsExplanation = () => {
         setTimeout(() => {
             setDescription(strenghts[0].description);
             setLoading(false);
-        }, 5000);
+        }, 2500);
     };
 
     return (

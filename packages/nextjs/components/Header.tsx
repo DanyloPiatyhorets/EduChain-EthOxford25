@@ -8,6 +8,8 @@ import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { DocumentIcon } from "@heroicons/react/24/outline";
+import { HomeIcon } from "@heroicons/react/24/outline";
+
 
 type HeaderMenuLink = {
   label: string;
@@ -19,6 +21,7 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/home",
+    icon: <HomeIcon className="h-4 w-4" />,
   },
   {
     label: "View Certificates",
