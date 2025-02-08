@@ -26,7 +26,6 @@ export default function UploadForm() {
       // Convert PDF to JSON
       const json = await convertPdfToJson(file.name);
       if (!json) throw new Error("Failed to extract certificate data");
-      alert("Json: " + JSON.stringify(json));
 
       // Convert JSON to IPFS hash
       const ipfsHash = await convertJsonToIpfsHash(json);
