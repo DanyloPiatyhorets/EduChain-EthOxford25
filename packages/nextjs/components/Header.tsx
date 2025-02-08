@@ -9,6 +9,8 @@ import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaff
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { DocumentIcon } from "@heroicons/react/24/outline";
 import { HomeIcon } from "@heroicons/react/24/outline";
+import { HandThumbUpIcon } from "@heroicons/react/24/outline";
+
 
 
 type HeaderMenuLink = {
@@ -27,6 +29,11 @@ export const menuLinks: HeaderMenuLink[] = [
     label: "View Certificates",
     href: "/mycertificates",
     icon: <DocumentIcon className="h-4 w-4" />,
+  },
+  {
+    label: "zkApp proofs",
+    href: "/zkproofs",
+    icon: <HandThumbUpIcon className="h-4 w-4" />,
   },
 ];
 
