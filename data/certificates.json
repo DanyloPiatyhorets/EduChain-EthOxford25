@@ -1,0 +1,41 @@
+{
+  "certificates": [
+    {
+      "studentName": "Alice Johnson",
+      "universityName": "Harvard University",
+      "courseName": "Computer Science",
+      "degree": "Bachelor of Science",
+      "graduationDate": 1717286400
+    },
+    {
+      "studentName": "Bob Smith",
+      "universityName": "MIT",
+      "courseName": "Data Science",
+      "degree": "Certificate",
+      "graduationDate": 1685750400
+    },
+    {
+      "studentName": "Bob Smith",
+      "universityName": "Stanford University",
+      "courseName": "Mechanical Engineering",
+      "degree": "Master of Science",
+      "graduationDate": 1654214400
+    },
+    {
+      "studentName": "Charlie Davis",
+      "universityName": "University of Oxford",
+      "courseName": "Business Administration",
+      "degree": "MBA",
+      "graduationDate": 1704067200
+    },
+    {
+      "studentName": "Emma Wilson",
+      "universityName": "Carnegie Mellon University",
+      "courseName": "Cybersecurity",
+      "degree": "Professional Certification",
+      "graduationDate": 1720000000
+    }
+  ]
+}
+
+
