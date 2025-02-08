@@ -7,7 +7,7 @@ import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
 import SectionOneMointains from "~~/components/ByAisari/SectionOneMointains";
-import PdfUploader from "~~/components/ByDanylo/PDFUpload";
+import PdfUploader from "~~/components/byDanylo/PDFUpload";
 import CardsExplanation from "~~/components/ByAisari/CardsExplanation";
 import IPFSCheck from "~~/components/ByAisari/IPFSCheck";
 
