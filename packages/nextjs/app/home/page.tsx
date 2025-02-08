@@ -7,7 +7,7 @@ import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
 import SectionOneMointains from "~~/components/ByAisari/SectionOneMointains";
-import PdfUploader from "~~/components/ByAisari/PDFUpload";
+import PdfUploader from "~~/components/ByDanylo/PDFUpload";
 import CardsExplanation from "~~/components/ByAisari/CardsExplanation";
 
 
@@ -17,8 +17,8 @@ const Home: NextPage = () => {
   return (
     <>
 
-    <SectionOneMointains />
-    <CardsExplanation />
+    {/*<SectionOneMointains />*/}
+    {/*<CardsExplanation />*/}
     <PdfUploader />
 
     
