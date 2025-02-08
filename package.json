@@ -54,6 +54,7 @@
     "node": ">=18.18.0"
   },
   "dependencies": {
+    "@flarenetwork/flare-periphery-contracts": "^0.1.20",
     "@openzeppelin/contracts": "^5.2.0"
   }
 }
