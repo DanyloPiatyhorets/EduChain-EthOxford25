@@ -58,5 +58,7 @@
     "axios": "^1.7.9",
     "lucide-react": "^0.475.0",
     "pinata": "^1.10.1"
+    "@flarenetwork/flare-periphery-contracts": "^0.1.20",
+    "@openzeppelin/contracts": "^5.2.0"
   }
 }

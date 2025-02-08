@@ -82,7 +82,7 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
        emit CertificateIssued(tokenId, student, msg.sender);
    }
 
-   /// @notice Verifier confirms data using Flare State Connector
+   /// @notice Verifier confirms data using Flare Data Connector
    function verifyCertificateData(
        uint256 tokenId,
        string memory _universityName,
