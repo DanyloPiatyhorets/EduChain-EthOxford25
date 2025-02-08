@@ -2,7 +2,7 @@
 import React from "react";
 import mainImage from "./mainImage.jpg";
 
-const LandingVideo = () => {
+const SectionOneMointains = () => {
   return (
     <div 
       className="w-screen h-screen flex items-center justify-center relative"
@@ -25,4 +25,4 @@ const LandingVideo = () => {
   );
 };
 
-export default LandingVideo;
+export default SectionOneMointains;
