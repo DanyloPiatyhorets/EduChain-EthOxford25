@@ -25,10 +25,10 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,
   },
-  
+
   {
     label: "View Certificates",
-    href: "/yourcertificates",
+    href: "/mycertificates",
     icon: <BugAntIcon className="h-4 w-4" />,
   },
 ];

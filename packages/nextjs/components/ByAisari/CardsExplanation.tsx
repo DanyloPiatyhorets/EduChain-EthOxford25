@@ -1,37 +1,33 @@
-import steps from './data/steps.json';
-
-interface Step {
-    title: string;
-    description: string;
-}
+import certificate from './data/certificate.json';
 
 const CardsExplanation = () => {
     return (
-        <div className="flex flex-col items-center my-16">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                {steps.map((step, index) => (
-                    <div key={index} className="relative">
-                        <div className="bg-white rounded-lg shadow-lg p-6 w-72">
-                            <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                            <p className="text-gray-600">{step.description}</p>
-                        </div>
-                        {index < steps.length - 1 && (
-                            <div className="hidden md:block absolute top-1/2 -right-6 transform -translate-y-1/2">
-                                <svg
-                                    className="w-4 h-4 text-gray-400"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
+        <div className="flex flex-col items-center my-16 px-4">
+            <h1 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Certificates
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {certificate.map((certificate, index) => (
+                    <div 
+                        key={index} 
+                        className="transform transition-all duration-300 hover:scale-105"
+                    >
+                        <div className="bg-white rounded-xl shadow-xl p-8 w-80 h-full border border-gray-100 hover:border-blue-500">
+                            <div className="space-y-4">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="text-2xl font-bold text-gray-800">
+                                        {certificate.universityName}
+                                    </h3>
+                                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="text-lg font-medium text-gray-700">{certificate.studentName}</p>
+                                    <p className="text-blue-600 font-semibold">{certificate.courseName}</p>
+                                    <p className="text-gray-600 font-medium">{certificate.degree}</p>
+                                    <p className="text-sm text-gray-500">{certificate.graduationDate}</p>
+                                </div>
                             </div>
-                        )}
+                        </div>
                     </div>
                 ))}
             </div>
