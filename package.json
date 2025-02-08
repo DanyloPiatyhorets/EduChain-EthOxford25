@@ -53,6 +53,10 @@
     "node": ">=18.18.0"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0"
+    "@heroicons/react": "^2.2.0",
+    "@pinata/sdk": "^2.1.0",
+    "axios": "^1.7.9",
+    "lucide-react": "^0.475.0",
+    "pinata": "^1.10.1"
   }
 }
