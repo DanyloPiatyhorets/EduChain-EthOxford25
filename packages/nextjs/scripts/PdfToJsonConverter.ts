@@ -12,21 +12,20 @@ function parseFilename(filename: string) {
   return null;
 }
 
-// Function to find the certificate in the JSON data
-function findCertificate(filename: string) {
+// Function to find the certificate and return it as a JSON object
+function convertPdfToJson(filename: string): Record<string, any> | null {
   const parsedData = parseFilename(filename);
   if (!parsedData) {
     console.error("Invalid filename format:", filename);
     return null;
   }
 
-  // Search for a matching certificate in the JSON data
-  return (
-    certificateData.certificates.find(
-      (c: { studentName: string; universityName: string }) =>
-        c.studentName === parsedData.studentName && c.universityName === parsedData.universityName,
-    ) || null
+  const certificate = certificateData.certificates.find(
+    (c: { studentName: string; universityName: string }) =>
+      c.studentName === parsedData.studentName && c.universityName === parsedData.universityName,
   );
+
+  return certificate ? { ...certificate } : null; // Ensures it's a valid JSON object
 }
 
-export { findCertificate };
+export { convertPdfToJson };
