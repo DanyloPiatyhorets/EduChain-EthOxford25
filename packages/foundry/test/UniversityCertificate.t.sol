@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.19;
 
-import "forge-std/Test.sol";
+import "dependencies/forge-std-1.9.5/src/Test.sol";
 import "../contracts/evm/UniversityCertificate.sol";
 
 contract UniversityCertificateTest is Test {
@@ -50,7 +50,7 @@ contract UniversityCertificateTest is Test {
         bytes32 documentHash = keccak256(abi.encodePacked(testIpfsHash));
 
         vm.prank(university);
-        universityCertificate.verifyCertificateData(0, universityName, courseName, studentName, graduationDate, documentHash);
+        universityCertificate.verifyCertificateData(0, universityName, courseName, studentName, graduationDate, degree, documentHash);
 
         // Retrieve certificate
         UniversityCertificate.Certificate memory cert = universityCertificate.getCertificate(0);

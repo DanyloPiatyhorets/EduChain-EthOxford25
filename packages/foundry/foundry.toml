@@ -1,9 +1,10 @@
 [profile.default]
 src = 'contracts'
 out = 'out'
-libs = ['lib']
+libs = ['dependencies']
 fs_permissions = [{ access = "read-write", path = "./"}]
 
+private_key = "${DEPLOYER_PRIVATE_KEY}"
 
 [rpc_endpoints]
 default_network = "http://127.0.0.1:8545"
@@ -27,7 +28,14 @@ scrollSepolia = "https://sepolia-rpc.scroll.io"
 scroll = "https://rpc.scroll.io"
 pgn = "https://rpc.publicgoods.network"
 pgnTestnet = "https://sepolia.publicgoods.network"
+conston2 = "https://coston2-api.flare.network/ext/C/rpc"
 
+
+[dependencies]
+flare-periphery = "0.0.20"
+forge-std = "1.9.5"
+"@openzeppelin-contracts" = "5.0.2"
+solidity-bytes-utils = { version = "0.0.0", git = "https://github.com/GNSPS/solidity-bytes-utils.git", rev = "b66afa93c6ba12bb91bac100fc35e8c8c1abae78" }
 
 [etherscan]
 polygonMumbai = { key = "${ETHERSCAN_API_KEY}" }

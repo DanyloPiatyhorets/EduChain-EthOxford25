@@ -1,0 +1,6 @@
+[[dependencies]]
+name = "flare-periphery"
+version = "0.0.20"
+url = "https://soldeer-revisions.s3.amazonaws.com/flare-periphery/0_0_20_07-02-2025_13:24:35_foundry_package.zip"
+checksum = "958c5d6df23e0eccd586bdd8a767fa074b882d3a3d0006634f17ad76c36048ae"
+integrity = "57d612da06c9a76708cf00d5fda8ed1e44c822c66ca74b820f0318559810b065"

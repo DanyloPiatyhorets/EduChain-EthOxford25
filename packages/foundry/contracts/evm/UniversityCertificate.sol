@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/token/ERC721/ERC721.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/access/AccessControl.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/utils/Strings.sol";
 import "./IERC5192.sol";
 
 /// @title University Certificate SBT Contract with Flare Data Connector
@@ -89,6 +89,7 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
        string memory _courseName,
        string memory _studentName,
        uint256 _graduationDate,
+       string memory _degree,
        bytes32 documentHash
    ) external onlyRole(VERIFIER_ROLE) {
        Certificate storage cert = certificates[tokenId];
@@ -100,6 +101,7 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
        cert.courseName = _courseName;
        cert.studentName = _studentName;
        cert.graduationDate = _graduationDate;
+        cert.degree = _degree;
        cert.isVerified = true;
 
        _verifiedHashes[documentHash] = true;
