@@ -33,5 +33,12 @@
     "courseName": "Cloud Computing and DevOps",
     "degree": "Certificate",
     "graduationDate": 1712016000
+  },
+  {
+    "studentName": "Alice Johnson",
+    "universityName": "MIT",
+    "courseName": "Project Management",
+    "degree": "Certificate",
+    "graduationDate": 1712016002
   }
 ]

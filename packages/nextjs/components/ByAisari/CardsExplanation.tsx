@@ -3,10 +3,18 @@ import certificate from './data/certificate.json';
 import strenghts from './data/strenghts.json';
 import ReactMarkdown from 'react-markdown';
 
-
 const CardsExplanation = () => {
-    // Define a state variable for description
     const [description, setDescription] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleGenerateDescription = () => {
+        setLoading(true);
+        setDescription(''); 
+        setTimeout(() => {
+            setDescription(strenghts[0].description);
+            setLoading(false);
+        }, 5000);
+    };
 
     return (
         <div className="flex flex-col items-center my-20 px-6 max-w-7xl mx-auto">
@@ -41,23 +49,49 @@ const CardsExplanation = () => {
             </div>
 
             <div className="mt-10 text-center">
-                    <button 
-                    onClick={() => setDescription(strenghts[0].description)} 
+                <button 
+                    onClick={handleGenerateDescription} 
                     className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                    >
-                    Show Certificate Description
-                    </button>
-                    {description && (
-                    <div className="mt-6 p-6 backdrop-blur-sm bg-white/90 rounded-xl shadow-lg max-w-2xl mx-auto text-left">
-                        {/* The ReactMarkdown component will parse and format the text */}
-                        <ReactMarkdown className="prose prose-blue">
-                        {description}
-                        </ReactMarkdown>
+                >
+                    Generate Description Using AI
+                </button>
+                {/* Show spinner if loading, otherwise show the description if available */}
+                {loading ? (
+                    <div className="mt-6 flex justify-center">
+                        <svg
+                            className="animate-spin h-8 w-8 text-blue-600"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                            ></circle>
+                            <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                            ></path>
+                        </svg>
                     </div>
-                    )}
-                </div>
+                ) : (
+                    description && (
+                        <div className="mt-6 p-6 backdrop-blur-sm bg-white/90 rounded-xl shadow-lg max-w-2xl mx-auto text-left">
+                            <ReactMarkdown className="prose prose-blue">
+                                {description}
+                            </ReactMarkdown>
+                        </div>
+                    )
+                )}
+            </div>
         </div>
     );
 };
 
 export default CardsExplanation;
+
