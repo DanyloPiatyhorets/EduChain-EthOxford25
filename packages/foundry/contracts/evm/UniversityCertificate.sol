@@ -28,7 +28,8 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
        string universityName;       
        string courseName;          
        string studentName;         
-       uint256 graduationDate;     
+       uint256 graduationDate;   
+       string degree;  
    }
 
    mapping(uint256 => Certificate) public certificates;
@@ -71,7 +72,8 @@ contract UniversityCertificate is ERC721, AccessControl, IERC5192 {
            universityName: "",
            courseName: "",
            studentName: "",
-           graduationDate: 0
+           graduationDate: 0,
+           degree:""
        });
 
        _mint(student, tokenId);
