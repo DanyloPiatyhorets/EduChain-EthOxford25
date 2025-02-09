@@ -6,6 +6,16 @@ import SendIcon from "@mui/icons-material/Send";
 import { Box, Button, Input, Typography } from "@mui/material";
 import { convertJsonToIpfsHash } from "~~/scripts/JsonToIpfsConverter";
 import { convertPdfToJson } from "~~/scripts/PdfToJsonConverter";
+import { styled } from "@mui/material/styles";
+
+
+const GradientTypography = styled(Typography)(({ theme }) => ({
+  background: 'linear-gradient(to right, #1976d2, #3f51b5)', // MUI primary and secondary colors
+  backgroundClip: 'text',
+  WebkitBackgroundClip: 'text',
+  color: 'transparent',
+  textAlign: 'center'
+}));
 
 export default function UploadForm() {
   const [file, setFile] = useState<File | null>(null);
@@ -46,7 +56,7 @@ export default function UploadForm() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
+        height: "40vh",
         width: "100%",
       }}
     >
@@ -60,9 +70,16 @@ export default function UploadForm() {
           textAlign: "center",
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: 2 }}>
+        <GradientTypography
+          variant="h4"
+          sx={{
+            fontWeight: 800,
+            fontSize: { xs: '1.75rem', sm: '2rem', md: '2.25rem' },
+            marginBottom: 3
+          }}
+        >
           Upload Certificate
-        </Typography>
+        </GradientTypography>
 
         <label htmlFor="file-input">
           <Input
@@ -71,13 +88,13 @@ export default function UploadForm() {
             onChange={handleFileChange}
             inputProps={{ accept: "application/pdf" }}
             sx={{
-              display: "none", // Hide the default input element
+              display: "none",
             }}
           />
           <Button
             component="span"
             sx={{
-              backgroundColor: "blue",
+              backgroundColor: "#1976d2", // MUI primary color
               color: "white",
               padding: "10px 20px",
               borderRadius: "8px",
@@ -85,14 +102,18 @@ export default function UploadForm() {
               width: "100%",
               textTransform: "none",
               boxShadow: 2,
+              '&:hover': {
+                backgroundColor: "#1565c0", // Darker shade
+              },
+              fontSize: { xs: '0.875rem', sm: '1rem' },
             }}
           >
             {file ? (
-              <>{file.name}</>
+              <Typography sx={{ fontSize: 'inherit' }}>{file.name}</Typography>
             ) : (
               <>
                 <FileUploadIcon sx={{ marginRight: 1 }} />
-                Choose a PDF file
+                <Typography sx={{ fontSize: 'inherit' }}>Choose a PDF file</Typography>
               </>
             )}
           </Button>
@@ -102,16 +123,21 @@ export default function UploadForm() {
           <Button
             onClick={handleConvert}
             sx={{
-              backgroundColor: "green",
+              backgroundColor: "#2e7d32", // MUI success color
               color: "white",
               padding: "10px 20px",
               borderRadius: "8px",
               width: "100%",
+              textTransform: "none",
+              '&:hover': {
+                backgroundColor: "#1b5e20", // Darker shade
+              },
+              fontSize: { xs: '0.875rem', sm: '1rem' },
             }}
           >
             <>
               <SendIcon sx={{ marginRight: 1 }} />
-              Send
+              <Typography sx={{ fontSize: 'inherit' }}>Send</Typography>
             </>
           </Button>
         )}
