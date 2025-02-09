@@ -1,25 +1,21 @@
 "use client";
 
 import type { NextPage } from "next";
+import React, { useRef } from "react";
+import { Button, Box } from "@mui/material";
 import { useAccount } from "wagmi";
+import Hero from "~~/app/home/components/Hero";
+import PdfUploader from "~~/app/home/components/PdfUpload";
 import { Address } from "~~/components/scaffold-eth";
-import PdfUploader from "~~/components/byDanylo/PdfUpload";
 
 const Home: NextPage = () => {
-  const { address: connectedAddress } = useAccount();
 
   return (
-    <>
-        <PdfUploader />
-
-    <div className="flex items-center flex-col flex-grow pt-10">
-        {/* If you still want to show landingVideo, just keep it here or remove it */}
-        {/* <landingVideo /> */}
-        {/* The rest of your page content */}
-      </div>
-    </>
+    <Box>
+      <Hero />
+      <PdfUploader/>
+    </Box>
   );
 };
 
 export default Home;
-

@@ -8,6 +8,10 @@ import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { DocumentIcon } from "@heroicons/react/24/outline";
+import { HomeIcon } from "@heroicons/react/24/outline";
+import { HandThumbUpIcon } from "@heroicons/react/24/outline";
+
+
 
 type HeaderMenuLink = {
   label: string;
@@ -19,11 +23,17 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/home",
+    icon: <HomeIcon className="h-4 w-4" />,
   },
   {
     label: "View Certificates",
     href: "/mycertificates",
     icon: <DocumentIcon className="h-4 w-4" />,
+  },
+  {
+    label: "zkApp proofs",
+    href: "/zkproofs",
+    icon: <HandThumbUpIcon className="h-4 w-4" />,
   },
 ];
 
@@ -89,7 +99,7 @@ export const Header = () => {
             </ul>
           )}
         </div>
-        <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
+        <Link href="/home" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex relative w-10 h-10">
             <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.png" />
           </div>

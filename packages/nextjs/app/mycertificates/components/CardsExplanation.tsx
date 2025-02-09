@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import certificate from './data/certificate.json';
-import strenghts from './data/strenghts.json';
+import certificate from '../../../components/ByAisari/data/certificate.json';
+import strenghts from '../../../components/ByAisari/data/strenghts.json';
 import ReactMarkdown from 'react-markdown';
 
 const CardsExplanation = () => {
@@ -13,7 +13,7 @@ const CardsExplanation = () => {
         setTimeout(() => {
             setDescription(strenghts[0].description);
             setLoading(false);
-        }, 5000);
+        }, 2000);
     };
 
     return (
