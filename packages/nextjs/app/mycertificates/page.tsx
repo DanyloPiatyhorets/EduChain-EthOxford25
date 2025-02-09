@@ -7,8 +7,7 @@ import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
 import SectionOneMointains from "~~/components/ByAisari/SectionOneMointains";
-import IPFSCheck from "~~/components/ByAisari/IPFSCheck";
-import CardsExplanation from "~~/components/ByAisari/CardsExplanation";
+import CardsExplanation from "~~/app/mycertificates/components/CardsExplanation";
 
 const fakeJsonData = {
   message: "Hello, IPFS!",

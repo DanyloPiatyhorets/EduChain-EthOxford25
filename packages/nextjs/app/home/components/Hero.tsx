@@ -86,7 +86,7 @@ const Hero = () => {
                   fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
                 }}
               >
-                Get your credentials approved and store them on chain
+                Get your credentials verified and securely stored on-chain
               </Typography>
 
               {/* CTA Buttons */}
