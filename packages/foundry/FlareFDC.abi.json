@@ -1,0 +1,393 @@
+[
+    {
+      "type": "function",
+      "name": "certificateHashes",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "certificates",
+      "inputs": [
+        {
+          "name": "",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "studentName",
+          "type": "string",
+          "internalType": "string"
+        },
+        {
+          "name": "universityName",
+          "type": "string",
+          "internalType": "string"
+        },
+        {
+          "name": "courseName",
+          "type": "string",
+          "internalType": "string"
+        },
+        {
+          "name": "degree",
+          "type": "string",
+          "internalType": "string"
+        },
+        {
+          "name": "graduationDate",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "ipfsHash",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getAllCertificates",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple[]",
+          "internalType": "struct FlareFDC.CertificateData[]",
+          "components": [
+            {
+              "name": "studentName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "universityName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "courseName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "degree",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "graduationDate",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "ipfsHash",
+              "type": "string",
+              "internalType": "string"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getCertificate",
+      "inputs": [
+        {
+          "name": "ipfsHash",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct FlareFDC.CertificateData",
+          "components": [
+            {
+              "name": "studentName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "universityName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "courseName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "degree",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "graduationDate",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "ipfsHash",
+              "type": "string",
+              "internalType": "string"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getFdcHub",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract IFdcHub"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "isJsonApiProofValid",
+      "inputs": [
+        {
+          "name": "_proof",
+          "type": "tuple",
+          "internalType": "struct IJsonApi.Proof",
+          "components": [
+            {
+              "name": "merkleProof",
+              "type": "bytes32[]",
+              "internalType": "bytes32[]"
+            },
+            {
+              "name": "data",
+              "type": "tuple",
+              "internalType": "struct IJsonApi.Response",
+              "components": [
+                {
+                  "name": "attestationType",
+                  "type": "bytes32",
+                  "internalType": "bytes32"
+                },
+                {
+                  "name": "sourceId",
+                  "type": "bytes32",
+                  "internalType": "bytes32"
+                },
+                {
+                  "name": "votingRound",
+                  "type": "uint64",
+                  "internalType": "uint64"
+                },
+                {
+                  "name": "lowestUsedTimestamp",
+                  "type": "uint64",
+                  "internalType": "uint64"
+                },
+                {
+                  "name": "requestBody",
+                  "type": "tuple",
+                  "internalType": "struct IJsonApi.RequestBody",
+                  "components": [
+                    {
+                      "name": "url",
+                      "type": "string",
+                      "internalType": "string"
+                    },
+                    {
+                      "name": "postprocessJq",
+                      "type": "string",
+                      "internalType": "string"
+                    },
+                    {
+                      "name": "abi_signature",
+                      "type": "string",
+                      "internalType": "string"
+                    }
+                  ]
+                },
+                {
+                  "name": "responseBody",
+                  "type": "tuple",
+                  "internalType": "struct IJsonApi.ResponseBody",
+                  "components": [
+                    {
+                      "name": "abi_encoded_data",
+                      "type": "bytes",
+                      "internalType": "bytes"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "verifyCertificateFromIPFS",
+      "inputs": [
+        {
+          "name": "data",
+          "type": "tuple",
+          "internalType": "struct IJsonApi.Proof",
+          "components": [
+            {
+              "name": "merkleProof",
+              "type": "bytes32[]",
+              "internalType": "bytes32[]"
+            },
+            {
+              "name": "data",
+              "type": "tuple",
+              "internalType": "struct IJsonApi.Response",
+              "components": [
+                {
+                  "name": "attestationType",
+                  "type": "bytes32",
+                  "internalType": "bytes32"
+                },
+                {
+                  "name": "sourceId",
+                  "type": "bytes32",
+                  "internalType": "bytes32"
+                },
+                {
+                  "name": "votingRound",
+                  "type": "uint64",
+                  "internalType": "uint64"
+                },
+                {
+                  "name": "lowestUsedTimestamp",
+                  "type": "uint64",
+                  "internalType": "uint64"
+                },
+                {
+                  "name": "requestBody",
+                  "type": "tuple",
+                  "internalType": "struct IJsonApi.RequestBody",
+                  "components": [
+                    {
+                      "name": "url",
+                      "type": "string",
+                      "internalType": "string"
+                    },
+                    {
+                      "name": "postprocessJq",
+                      "type": "string",
+                      "internalType": "string"
+                    },
+                    {
+                      "name": "abi_signature",
+                      "type": "string",
+                      "internalType": "string"
+                    }
+                  ]
+                },
+                {
+                  "name": "responseBody",
+                  "type": "tuple",
+                  "internalType": "struct IJsonApi.ResponseBody",
+                  "components": [
+                    {
+                      "name": "abi_encoded_data",
+                      "type": "bytes",
+                      "internalType": "bytes"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "CertificateVerified",
+      "inputs": [
+        {
+          "name": "ipfsHash",
+          "type": "string",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "name": "data",
+          "type": "tuple",
+          "indexed": false,
+          "internalType": "struct FlareFDC.CertificateData",
+          "components": [
+            {
+              "name": "studentName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "universityName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "courseName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "degree",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "graduationDate",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "ipfsHash",
+              "type": "string",
+              "internalType": "string"
+            }
+          ]
+        }
+      ],
+      "anonymous": false
+    }
+  ]
