@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.6 <0.9;
 
-import {IERC20} from "@openzeppelin-contracts/token/ERC20/IERC20.sol";
+import {IERC20} from "dependencies/@openzeppelin-contracts-5.0.2/token/ERC20/IERC20.sol";
 import {IGovernanceVotePower} from "./IGovernanceVotePower.sol";
 import {IVPContractEvents} from "./IVPContractEvents.sol";
 

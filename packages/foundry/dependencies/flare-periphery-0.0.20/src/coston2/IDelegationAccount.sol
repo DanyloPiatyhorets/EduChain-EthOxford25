@@ -2,7 +2,7 @@
 pragma solidity >=0.7.6 <0.9;
 
 import "./IClaimSetupManager.sol";
-import "@openzeppelin-contracts/token/ERC20/IERC20.sol";
+import "dependencies/@openzeppelin-contracts-5.0.2/token/ERC20/IERC20.sol";
 
 interface IDelegationAccount {
 
