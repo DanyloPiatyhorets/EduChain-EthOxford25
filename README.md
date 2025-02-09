@@ -26,3 +26,8 @@ and individuals can seamlessly confirm credentials without relying on intermedia
 - Foundry
 - Flare Data Connector
 - Mina ZK service
+### How to run
+Clone the repo and run locally by typing
+> yarn install <br/>
+> yarn build <br/>
+> yarn start <br/>
