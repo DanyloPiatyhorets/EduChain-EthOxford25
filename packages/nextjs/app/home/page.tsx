@@ -3,7 +3,7 @@
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import { Address } from "~~/components/scaffold-eth";
-import PdfUploader from "~~/components/byDanylo/PdfUpload";
+import PdfUploader from "~~/app/home/components/PdfUpload";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
