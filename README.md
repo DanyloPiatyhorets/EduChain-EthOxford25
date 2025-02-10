@@ -1,7 +1,7 @@
 # EduChain
 
 > Made with love at EthOxford '25 hackathon February 7th - 9th
-## Problem
+## Case
 In today's digital world, verifying educational credentials is often slow, expensive, and prone to fraud. Employers, institutions, and individuals struggle with:
 
 - **Credential Fraud** Fake diplomas and certificates are easily created and hard to detect.
@@ -26,8 +26,18 @@ and individuals can seamlessly confirm credentials without relying on intermedia
 - Foundry
 - Flare Data Connector
 - Mina ZK service
-### How to run
-Clone the repo and run locally by typing
-> yarn install <br/>
-> yarn build <br/>
-> yarn start <br/>
+## How to run locally
+Follow these steps to set up and run the project on your local machine
+1. Clone the repository <br/>
+`git clone <repository-url>`<br/>
+`cd <repository-folder>`
+3. Install Dependencies<br/>
+Run the following command to install all necessary packages
+`yarn install`
+4. Build the Project<br/>
+Compile the project by running
+`yarn build`
+5. Start the Application<br/>
+Launch the application with
+`yarn start`
+
