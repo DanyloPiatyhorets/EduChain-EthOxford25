@@ -1,5 +1,5 @@
 # EduChain
-
+![Home page](packages/nextjs/public/home_page.png)
 > Made with love at EthOxford '25 hackathon February 7th - 9th
 ## Case
 In today's digital world, verifying educational credentials is often slow, expensive, and prone to fraud. Employers, institutions, and individuals struggle with:
